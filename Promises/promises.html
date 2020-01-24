@@ -1,0 +1,24 @@
+<script type="text/javascript">
+function allFunction(){
+   
+    let sentSms=function(){
+        return new Promise(function(resolve,reject){
+            setTimeout(function(){
+                sms();
+                resolve();
+            },3000);
+        })
+    }
+
+sentSms().then(function(){
+    mail();
+})
+}
+function mail(){
+    console.log("mail function called");
+}
+function sms(){
+    console.log("sms function called");
+}
+ allFunction();
+</script>
